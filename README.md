@@ -15,7 +15,7 @@ DB_PASSWORD= # password of user
 
 ## laragon  
 
-    - **before install project in www/  
+    **before install project in www/  
     folder of laragon restart laragon serve  
     and use url provided of laragon serve**  
 ```bash

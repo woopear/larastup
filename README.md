@@ -287,7 +287,7 @@ public function boot()
 }
 ```  
 
-6. create restricted access with middelware  
+7. create restricted access with middelware  
 ```php
 // on group route or route add middelware ` 'auth' `
 // warning look view for redirect is set in files `config/fortify`  
@@ -319,8 +319,8 @@ $ php artisan migrate
 ## views  
 
 - layouts  
-    1. create folder layouts in views folder  
-    2. create two files `app.blade.php`, `private.blade.php`  
+1. create folder layouts in views folder  
+2. create two files `app.blade.php`, `private.blade.php`  
 ```php
 // app.blade.php
 <!DOCTYPE html>
@@ -358,7 +358,7 @@ $ php artisan migrate
     </body>
 </html>
 ```  
-    3. use layout in files blade  
+3. use layout in files blade  
 ```php
 // call layout app and call content main app
 @extends('layouts.app')
@@ -374,7 +374,7 @@ $ php artisan migrate
     <p class="text-red-500">accueil</p>
 @endsection
 ```  
-    4. for create a section (header, nav, footer, etc...)  
+4. for create a section (header, nav, footer, etc...)  
 ```php
 // create folder partials and file header-app.blade.php
 // and add in your layouts files with this  

@@ -372,6 +372,36 @@ Route::middleware(['auth'])->name('private.')->group(function () {
 ```  
 5. renome welcome file to home and change route  
 
+6. help form  
+```html
+<!-- request avec csrf -->
+<form method="POST" action="/foo/bar">
+    @csrf
+    <!-- your content -->
+</form>
+
+<!-- change method request for forms -->
+<form action="/foo/bar" method="POST">
+    @method('PUT')
+    <!-- your content -->
+</form>
+
+<!-- here is error in blade file, do you configure controller files for return error validator -->
+<!-- use error for fom -->
+@error('title')<!-- joint with id of input -->
+    <div class="alert alert-danger">{{ $message }}</div>
+@enderror  
+
+<!-- use many error for fom -->
+@error('title', 'name', 'password')<!-- joint with id of input -->
+    <div class="alert alert-danger">{{ $message }}</div>
+@enderror
+
+<!-- use error form directive directly in class for get design custom -->
+class="@error('title') is-invalid @enderror"
+class="@error('email') is-invalid @else is-valid @enderror"
+```
+
 ## migration  
 
 - create migration  

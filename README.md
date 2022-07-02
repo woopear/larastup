@@ -321,8 +321,8 @@ $ php artisan migrate
 - layouts and partials  
 1. create folder layouts in views folder  
 2. create two files `app.blade.php`, `private.blade.php`  
-```php
-// app.blade.php
+```html
+<!-- app.blade.php --> 
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -340,7 +340,7 @@ $ php artisan migrate
     </body>
 </html>
 
-// private.blade.php
+<!-- private.blade.php -->
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>

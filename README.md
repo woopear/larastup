@@ -46,6 +46,30 @@ $ cd myproject
 $ php artisan serve
 ```  
 
+4. hot reaload, update files `vite.config.js`
+```js
+export default defineConfig({
+    plugins: [
+        laravel([
+            'resources/css/app.css',
+            'resources/js/app.js',
+        ]),
+        // add this ...
+        {
+            name: 'blade',
+            handleHotUpdate({ file, server }) {
+                if (file.endsWith('.blade.php')) {
+                    server.ws.send({
+                        type: 'full-reload',
+                        path: '*',
+                    });
+                }
+            },
+        }
+    ],
+});
+```
+
 ## tailwind  
 
 1. before install project laravel, install tailwind  
@@ -290,4 +314,70 @@ Route::middleware(['auth'])->name('private.')->group(function () {
 > you can create migrations  
 ```bash
 $ php artisan migrate
-```
+``` 
+
+## views  
+
+- layouts  
+    1. create folder layouts in views folder  
+    2. create two files `app.blade.php`, `private.blade.php`  
+```php
+// app.blade.php
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        @vite(['resources/css/app.css', 'resources/js/app.js'])
+        @livewireStyles
+        <title>{{ $titlePage ?? 'Test Laravel' }}</title>
+    </head>
+    <body>
+        <main>
+            @yield('content-app')
+        </main>
+        @livewireScripts
+    </body>
+</html>
+
+// private.blade.php
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        @vite(['resources/css/app.css', 'resources/js/app.js'])
+        @livewireStyles
+        <title>{{ $titlePage ?? 'Test Laravel' }}</title>
+    </head>
+    <body>
+        <main>
+            @yield('content-private')
+        </main>
+        @livewireScripts
+    </body>
+</html>
+```  
+    3. use layout in files blade  
+```php
+// call layout app and call content main app
+@extends('layouts.app')
+
+@section('content-app')
+    <p class="text-red-500">accueil</p>
+@endsection
+
+// call layout private and call content main private
+@extends('layouts.private')
+
+@section('content-private')
+    <p class="text-red-500">accueil</p>
+@endsection
+```  
+    4. for create a section (header, nav, footer, etc...)  
+```php
+// create folder partials and file header-app.blade.php
+// and add in your layouts files with this  
+@include('partials.header-app')
+```  
+    5. renome welcome file to home and change route

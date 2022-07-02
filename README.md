@@ -318,7 +318,7 @@ $ php artisan migrate
 
 ## views  
 
-- layouts  
+- layouts and partials  
 1. create folder layouts in views folder  
 2. create two files `app.blade.php`, `private.blade.php`  
 ```php
@@ -380,4 +380,4 @@ $ php artisan migrate
 // and add in your layouts files with this  
 @include('partials.header-app')
 ```  
-    5. renome welcome file to home and change route
+5. renome welcome file to home and change route

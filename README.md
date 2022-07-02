@@ -122,7 +122,7 @@ $ composer require livewire/livewire
 </html>
 ```  
 
-3. create component livewire  
+3. example create component livewire  
 ```bash
 $ php artisan make:livewire counter
 ```  

@@ -57,6 +57,8 @@ $ npx tailwindcss init -p
 2. config tailwind.config.js   
 ```js
 // add in key content  
+//this may change over time
+//pay attention and look at the documentation
 content: [
     './storage/framework/views/*.php',
     './resources/**/*.blade.php',

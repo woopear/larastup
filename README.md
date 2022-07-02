@@ -56,8 +56,8 @@ $ npx tailwindcss init -p
 
 2. config tailwind.config.js   
 ```js
-// add in key content  
-//this may change over time
+// add in key content   
+//this may change over time  
 //pay attention and look at the documentation
 content: [
     './storage/framework/views/*.php',
@@ -267,10 +267,20 @@ public function boot()
 ```php
 // on group route or route add middelware ` 'auth' `
 // warning look view for redirect is set in files `config/fortify`  
-// EX : add middelware  
+// EX : add middelware in route 
 Route::get('dashboard', function () {
     return view('dashboard');
-})->middleware('auth')
+})->middleware('auth');
+// EX : add middelware in group route  
+Route::name('private.')->group(function () {
+    Route::get('/', function () {
+        // Route assigned name "private.private"...
+    })->name('private');
+
+    Route::get('/profil', function () {
+        // Route assigned name "private.profil"...
+    })->name('profil');
+})->middleware('auth');
 ```  
 
 > now create views and feature custom  

@@ -271,6 +271,9 @@ Route::get('dashboard', function () {
 })->middleware('auth')
 ```  
 
+> now create views and feature custom  
+> for different request
+
 ## migration  
 
 - create migration  

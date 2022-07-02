@@ -304,17 +304,7 @@ Route::middleware(['auth'])->name('private.')->group(function () {
 ```  
 
 > now create views and feature custom  
-> for different request
-
-## migration  
-
-- create migration  
-> after install all package  
-> and create your migration of tables 
-> you can create migrations  
-```bash
-$ php artisan migrate
-``` 
+> for different request  
 
 ## views  
 
@@ -380,4 +370,14 @@ $ php artisan migrate
 // and add in your layouts files with this  
 @include('partials.header-app')
 ```  
-5. renome welcome file to home and change route
+5. renome welcome file to home and change route  
+
+## migration  
+
+- create migration  
+> after install all package  
+> and create your migration of tables 
+> you can create migrations  
+```bash
+$ php artisan migrate
+``` 

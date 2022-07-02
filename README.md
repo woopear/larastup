@@ -272,15 +272,11 @@ Route::get('dashboard', function () {
     return view('dashboard');
 })->middleware('auth');
 // EX : add middelware in group route  
-Route::name('private.')->group(function () {
-    Route::get('/', function () {
-        // Route assigned name "private.private"...
-    })->name('private');
-
-    Route::get('/profil', function () {
-        // Route assigned name "private.profil"...
-    })->name('profil');
-})->middleware('auth');
+Route::middleware(['auth'])->name('private.')->group(function () {
+    // private.dashboard
+    Route::get('/dashboard', function () {
+    })->name('dashboard');
+});
 ```  
 
 > now create views and feature custom  

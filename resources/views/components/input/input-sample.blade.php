@@ -5,6 +5,7 @@
     'classinput', // class input
     'label' => null, // le label
     'idlabel' => null, // "id" of input and "for" of label
+    'name' => null, // name of input et name for error validator
 ])
 {{-- in div or label or input, add your properties of class custom component --}}
 
@@ -25,4 +26,9 @@
         type="text" 
         class="{{ $classinput ?? '' }}"
     />
+
+    {{-- error validator input --}}
+    @error($name)
+        <div class="{{ $classdiverror }}">{{ $message }}</div>
+    @enderror
 </div>

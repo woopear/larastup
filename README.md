@@ -450,6 +450,35 @@ $ php artisan make:component MyComponent --view
 ])
 // slot for text of btn
 // in div or btn, add your properties of class custom component
+```  
+
+## middelware  
+
+- create middleware  
+```bash
+$ php artisan make:middleware MyName  
+```
+
+- example implements roads  
+look documentation for more examples
+```php
+// all roads access for admin role
+Route::middleware(['admin'])->name('admin.')->group(function () {
+    // name road admin.settings
+    Route::get('/settings', function () {
+    })->name('settings');
+});
+```  
+
+- copy files middleware in app/Http/Middleware/IsAdmin.php  
+and use this file example for create your custom middleware  
+
+- implement middleware in `kernel.php` path `app/Http/kernel.php`  
+```php
+protected $routeMiddleware = [
+    // all middleware ...
+    'admin' => \Illuminate\Auth\Middleware\IsAdmin::class,
+];
 ```
 
 ## migration  

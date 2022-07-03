@@ -414,7 +414,7 @@ $ php artisan make:component MyComponent
 $ php artisan make:component MyComponent --view
 ```
 
-- input => copy folder components/input  
+- input => copy folder ressources/views/components/input  
 ```php
 // properties :
 @props([
@@ -427,7 +427,7 @@ $ php artisan make:component MyComponent --view
 ])
 // in div or label or input, add your properties of class custom component
 ```
-- form => copy folder components/form
+- form => copy folder ressources/views/components/form
 ```php
 // properties :
 @props([
@@ -441,7 +441,7 @@ $ php artisan make:component MyComponent --view
 // slot for content of form
 // in div or form, add your properties of class custom component 
 ```  
-- btn => copy folder components/btn  
+- btn => copy folder ressources/views/components/btn  
 ```php
 @props([
     'classdiv' => null, // class div around all component

@@ -424,6 +424,7 @@ $ php artisan make:component MyComponent --view
     'classinput', // class input
     'label' => null, // le label
     'idlabel' => null, // "id" of input and "for" of label
+    'name' => null, // name of input et name for error validator
 ])
 // in div or label or input, add your properties of class custom component
 ```

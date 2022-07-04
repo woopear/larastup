@@ -2,6 +2,7 @@
 
 namespace App\Http\Middleware;
 
+use App\Contracts\RoleInterface;
 use Closure;
 use Illuminate\Http\Request;
 
@@ -17,7 +18,7 @@ class IsAdmin
     public function handle(Request $request, Closure $next)
     {
         // if user has role admin
-        if (auth()->user()->role->libelle == 'admin') {
+        if (auth()->user()->role->libelle == RoleInterface::admin) {
             return $next($request);
         } else {
             abort(403);

@@ -1,5 +1,7 @@
 # larastup
 
+---
+
 ## database  
 
 - config .env for your database  
@@ -11,7 +13,9 @@ DB_PORT=3306 # port
 DB_DATABASE=laravel # name database
 DB_USERNAME=root # name user of database
 DB_PASSWORD= # password of user
-```
+```  
+
+---
 
 ## laragon  
 
@@ -22,6 +26,8 @@ and use url provided of laragon serve**
 # EX : 
 http://folderofproject.test/
 ```
+
+---
 
 ## vite
 
@@ -68,7 +74,9 @@ export default defineConfig({
         }
     ],
 });
-```
+```  
+
+---
 
 ## tailwind  
 
@@ -98,6 +106,8 @@ content: [
 @tailwind components;
 @tailwind utilities;
 ```  
+
+---
 
 ## livewire  
 
@@ -148,6 +158,8 @@ $ php artisan make:livewire counter
 </html>
 ```  
 
+---
+
 ## alpine js  
 
 1. install  
@@ -162,6 +174,8 @@ window.Alpine = Alpine
 Alpine.start()
 ```  
 
+---
+
 ## unpoly js  
 
 1. install  
@@ -174,6 +188,8 @@ $ npm install unpoly --save
 import 'unpoly';
 import 'unpoly/unpoly.css';
 ```  
+
+---
 
 ## fortify install  
 
@@ -306,6 +322,8 @@ Route::middleware(['auth'])->name('private.')->group(function () {
 > now create views and feature custom  
 > for different request  
 
+---
+
 ## views blade  
 
 - layouts and partials  
@@ -402,6 +420,8 @@ class="@error('title') is-invalid @enderror"
 class="@error('email') is-invalid @else is-valid @enderror"
 ```  
 
+---
+
 ## components blade  
 
 - create component with class  
@@ -453,7 +473,9 @@ $ php artisan make:component MyComponent --view
 // in div or btn, add your properties of class custom component
 ```  
 
-**Warning custom your design**
+**Warning custom your design**  
+
+---
 
 ## middelware  
 
@@ -485,6 +507,8 @@ protected $routeMiddleware = [
     'admin' => \Illuminate\Auth\Middleware\IsAdmin::class,
 ];
 ```  
+
+---
 
 ## relation user and role for use middleware  
 
@@ -548,7 +572,9 @@ public function role()
 }
 ```  
 
-### - many to many
+### - many to many  
+
+---
 
 ## migration  
 

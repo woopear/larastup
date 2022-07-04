@@ -444,6 +444,7 @@ $ php artisan make:component MyComponent --view
 ```  
 - btn => copy folder ressources/views/components/btn  
 ```php
+// properties :
 @props([
     'classdiv' => null, // class div around all component
     'classbtn' => null, // class of btn
@@ -451,6 +452,8 @@ $ php artisan make:component MyComponent --view
 // slot for text of btn
 // in div or btn, add your properties of class custom component
 ```  
+
+**Warning custom your design**
 
 ## middelware  
 
@@ -473,6 +476,7 @@ Route::middleware(['admin'])->name('admin.')->group(function () {
 - copy files middleware in app/Http/Middleware/IsAdmin.php  
 and use this file example for create your custom middleware  
 and copy folder Contracts in app/ for a file of interface role  
+and update for custom your roles.
 
 - implement middleware in `kernel.php` path `app/Http/kernel.php`  
 ```php
@@ -484,7 +488,67 @@ protected $routeMiddleware = [
 
 ## relation user and role for use middleware  
 
+### - role with user (one to many)
 
+- creation role model and role migration with `php artisan`
+
+- add properties for role in migration of role
+```php
+// code basic in migration/role.php
+/*public function up()
+{
+    Schema::create('roles', function (Blueprint $table) {
+        $table->id();
+        $table->timestamps();
+    });
+}*/
+
+// EX : add this properties
+$table->string('libelle');
+```  
+- add properties in model files of role  
+and function for relation of users  
+**warning add namespace**  
+```php
+/**
+ * get all users of role
+ *
+ * @return void
+ */
+public function users()
+{
+    return $this->hasMany(User::class);
+}
+
+/**
+ * properties of role
+ *
+ * @var array
+ */
+public $fillable = [
+    'libelle',
+];
+```  
+- add properties in user migration file  
+```php
+// relation with role table  
+$table->foreignId('role_id')->constrained();
+```  
+- add function of relation user with role in User model file  
+**warning add namespace**   
+```php
+/**
+ * get role of user
+ *
+ * @return void
+ */
+public function role()
+{
+    return $this->hasOne(Role::class);
+}
+```  
+
+### - many to many
 
 ## migration  
 

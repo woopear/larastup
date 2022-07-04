@@ -633,7 +633,12 @@ and named in alphabetical order and in the singular
 
 ---  
 
-## <a name="upload"></a> upload files   
+## <a name="upload"></a> upload files  
+
+- create a link of app/public -> storage/app/public  
+```bash
+$ php artisan storage:link
+```
 
 ### facade Storage
 

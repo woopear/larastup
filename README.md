@@ -1,8 +1,17 @@
-# larastup
+# larastup  
+
+[config database .env](#database)  
+[laragon url project](#laragon)  
+[config vite](#vite)  
+[install config tailwind](#tailwind)   
+[install livewire](#livewire)   
+[install alpine](#alpine)   
+[install unpoly](#unpoly)   
+[install fortify](#fortify)   
 
 ---
 
-## database  
+## <a name="database"></a> database  
 
 - config .env for your database  
 
@@ -17,7 +26,7 @@ DB_PASSWORD= # password of user
 
 ---
 
-## laragon  
+## <a name="laragon"></a> laragon  
 
 **before install project in www/  
 folder of laragon restart laragon serve  
@@ -29,7 +38,7 @@ http://folderofproject.test/
 
 ---
 
-## vite
+## <a name="vite"></a> vite
 
 1. add assets files in head balise for vite serve  
 ```html
@@ -78,7 +87,7 @@ export default defineConfig({
 
 ---
 
-## tailwind  
+## <a name="tailwind"></a> tailwind  
 
 1. before install project laravel, install tailwind  
 ```bash
@@ -109,7 +118,7 @@ content: [
 
 ---
 
-## livewire  
+## <a name="livewire"></a> livewire  
 
 1. install in composer  
 ```bash
@@ -160,7 +169,7 @@ $ php artisan make:livewire counter
 
 ---
 
-## alpine js  
+## <a name="alpine"></a> alpine js  
 
 1. install  
 ```bash
@@ -176,7 +185,7 @@ Alpine.start()
 
 ---
 
-## unpoly js  
+## <a name="unpoly"></a> unpoly js  
 
 1. install  
 ```bash
@@ -191,7 +200,7 @@ import 'unpoly/unpoly.css';
 
 ---
 
-## fortify install  
+## <a name="fortify"></a> fortify install  
 
 1. install composer  
 ```bash	

@@ -306,7 +306,7 @@ Route::middleware(['auth'])->name('private.')->group(function () {
 > now create views and feature custom  
 > for different request  
 
-## views  
+## views blade  
 
 - layouts and partials  
 1. create folder layouts in views folder  
@@ -479,7 +479,11 @@ protected $routeMiddleware = [
     // all middleware ...
     'admin' => \Illuminate\Auth\Middleware\IsAdmin::class,
 ];
-```
+```  
+
+## relation user and role for use middleware  
+
+
 
 ## migration  
 

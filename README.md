@@ -1,17 +1,21 @@
 # larastup  
 
-[config database .env](#database)  
-[laragon url project](#laragon)  
+[config database .env and laragon url](#databaselaragon)  
 [config vite](#vite)  
 [install config tailwind](#tailwind)   
 [install livewire](#livewire)   
 [install alpine](#alpine)   
-[install unpoly](#unpoly)   
-[install fortify](#fortify)   
+[install unpoly](#unpoly)  
+[install config fortify](#fortify)   
+[example view blade](#viewblade)   
+[example components blade](#componentblade)   
+[example middlewares](#middleware)   
+[example relations](#relation)   
+[example migrations](#migration)   
 
 ---
 
-## <a name="database"></a> database  
+## <a name="databaselaragon"></a> database and laragon  
 
 - config .env for your database  
 
@@ -24,9 +28,7 @@ DB_USERNAME=root # name user of database
 DB_PASSWORD= # password of user
 ```  
 
----
-
-## <a name="laragon"></a> laragon  
+- find url of project in laragon
 
 **before install project in www/  
 folder of laragon restart laragon serve  
@@ -36,7 +38,7 @@ and use url provided of laragon serve**
 http://folderofproject.test/
 ```
 
----
+---  
 
 ## <a name="vite"></a> vite
 
@@ -333,7 +335,7 @@ Route::middleware(['auth'])->name('private.')->group(function () {
 
 ---
 
-## views blade  
+## <a name="viewblade"></a> views blade  
 
 - layouts and partials  
 1. create folder layouts in views folder  
@@ -431,7 +433,7 @@ class="@error('email') is-invalid @else is-valid @enderror"
 
 ---
 
-## components blade  
+## <a name="componentblade"></a> components blade  
 
 - create component with class  
 ```bash
@@ -486,7 +488,7 @@ $ php artisan make:component MyComponent --view
 
 ---
 
-## middelware  
+## <a name="middleware"></a> middelware  
 
 - create middleware  
 ```bash
@@ -519,7 +521,7 @@ protected $routeMiddleware = [
 
 ---
 
-## relation user and role for use middleware  
+## <a name="relation"></a> relation user and role for use middleware  
 
 ### - EX : role with user (one to many)
 
@@ -630,7 +632,7 @@ and named in alphabetical order and in the singular
 
 ---
 
-## migration  
+## <a name="migration"></a> migration  
 
 **Waring do you create table with migration controle the order of files migration**
 

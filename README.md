@@ -11,6 +11,7 @@
 [example components blade](#componentblade)   
 [example middlewares](#middleware)   
 [example relations](#relation)   
+[example upload](#upload)   
 [example migrations](#migration)   
 
 ---
@@ -628,7 +629,40 @@ and named in alphabetical order and in the singular
 // EX : article_category
 ```  
 
-- look documentation for more exemple
+- look documentation for more exemple  
+
+---  
+
+## <a name="upload"></a> upload  
+
+- upload file in local  
+(this example play for upload public  
+juste change disks for upload)  
+
+**look documentation for more example**
+
+```php
+// here $request->avatar 
+// avatar is a name of input in html
+Storage::disk('local')->put('avatar', $request->avatar)  
+
+// or if you get a url of file  
+$file = Storage::disk('local')->put('avatar', $request->avatar)
+// $file == 'path of file'
+```  
+
+- download file  
+```php
+// down file for users
+return Storage::download($file)
+```  
+
+- example class upload predefined  
+update this for custom class  
+
+```php
+
+```
 
 ---
 

@@ -609,7 +609,15 @@ public function user()
 }
 ```  
 
-### - many to many
+### - many to many  
+
+- create one table intermediaire  
+and named in alphabetical order and in the singular  
+```php
+// EX : article_category
+```  
+
+- look documentation for more exemple
 
 ---
 

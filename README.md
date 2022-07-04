@@ -472,6 +472,7 @@ Route::middleware(['admin'])->name('admin.')->group(function () {
 
 - copy files middleware in app/Http/Middleware/IsAdmin.php  
 and use this file example for create your custom middleware  
+and copy folder Contracts in app/ for a file of interface role  
 
 - implement middleware in `kernel.php` path `app/Http/kernel.php`  
 ```php

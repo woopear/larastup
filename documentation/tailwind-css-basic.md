@@ -122,23 +122,23 @@ menu up, menu left, footer in menu left, main center
 - html
 ```html 
 <body>
-        <header>
-            je suis le header
-        </header>
-        <main>
-            <section sideleftmenu>
-                <nav navmenuside>
-                    je suis la nav
-                </nav>
-                <footer>
-                    je suis le footer
-                </footer>
-            </section>
-            <section contentmain>
-                @yield('content-app')
-            </section>
-        </main>
-    </body>
+    <header>
+        je suis le header
+    </header>
+    <main>
+        <section sideleftmenu>
+            <nav navmenuside>
+                je suis la nav
+            </nav>
+            <footer>
+                je suis le footer
+            </footer>
+        </section>
+        <section contentmain>
+            @yield('content-app')
+        </section>
+    </main>
+</body>
 ```  
 - css
 ```css 

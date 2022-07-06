@@ -54,6 +54,7 @@ $ php artisan make:component MyComponent --view
 ```  
 - form-connexion => copy folder ressources/views/components/form  
 ```php
+// properties :
 @props([
     'classdiv' => 'w-fit', // classdiv arounded all component' 
 ])
@@ -68,6 +69,13 @@ $ php artisan make:component MyComponent --view
 // slot for text of btn
 // in div or btn, add your properties of class custom component
 ```  
+
+- text-link => copy folder ressources/views/components/text-link  
+```php
+{{ $attributes }} // add other attributes in balise of component
+$textlink // text of link 
+// add href on balide of component
+```
 
 - user-svg => copy folder ressources/views/components/icon  
 ```php

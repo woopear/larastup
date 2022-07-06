@@ -26,5 +26,6 @@
     />
 
     {{-- link for forgot password --}}
+    <x-text-link.text-link-xs textlink="Mot de passe oublié ?"/>
     
 </x-form.form-sample>

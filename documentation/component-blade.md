@@ -55,7 +55,7 @@ $ php artisan make:component MyComponent --view
 - form-connexion => copy folder ressources/views/components/form  
 ```php
 @props([
-    'classdiv' => '', // classdiv arounded all component' 
+    'classdiv' => 'w-fit', // classdiv arounded all component' 
 ])
 ```  
 - btn => copy folder ressources/views/components/btn  

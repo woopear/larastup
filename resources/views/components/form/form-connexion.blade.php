@@ -1,11 +1,12 @@
 @props([
-    'classdiv' => '', // classdiv arounded all component' 
+    'classdiv' => 'w-fit', // classdiv arounded all component' 
 ])
 
 {{-- give the route for action of form --}}
 <x-form.form-sample 
-    action=""
-    classdiv="{{ $classdiv }}"
+    {{ $attributes }}
+    action="" {{-- your route for connexion user --}}
+    classdiv="{{ $classdiv ? $classdiv : null }}"
 >
     {{-- input email or identifiant --}}
     <x-input.input-sample 

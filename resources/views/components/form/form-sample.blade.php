@@ -1,8 +1,8 @@
 @props([
-    'classdiv' => '', // class div around all component
-    'classform' => '', // class of form
+    'classdiv' => 'w-fit', // class div around all component => custom this for width for input
+    'classform' => 'w-fit', // class of form
     'method' => 'POST', // method of form default POST
-    'otherMethod' => null, // for method differrent of POST or GET
+    'otherMethod' => null, // for method differrent of POST or GET => PUT , DELETE
     'action' => null, // action of form
     'textbtn' => 'Envoyer', // text of btn default 'Envoyer'
 ])

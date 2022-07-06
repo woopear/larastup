@@ -16,37 +16,6 @@
 
 ---
 
-## <a name="tailwind"></a> tailwind  
-
-1. before install project laravel, install tailwind  
-```bash
-$ npm install -D tailwindcss postcss autoprefixer  
-$ npx tailwindcss init -p
-```  
-
-2. config tailwind.config.js   
-```js
-// add in key content   
-//this may change over time  
-//pay attention and look at the documentation
-content: [
-    './storage/framework/views/*.php',
-    './resources/**/*.blade.php',
-    './resources/**/*.js',
-    './resources/**/*.vue',  
-    "./vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php",
-  ],
-```  
-
-3. config app.css `(ressources/css/app.css)`  
-```css
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-```  
-
----
-
 ## <a name="livewire"></a> livewire  
 
 1. install in composer  

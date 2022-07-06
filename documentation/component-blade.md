@@ -14,15 +14,29 @@ $ php artisan make:component MyComponent --view
 ```php
 // properties :
 @props([
-    'classdiv', // class div around all component
-    'classdivlabel', // class div around label
-    'classlabel', // class label
-    'classinput', // class input
-    'label' => null, // le label
     'idlabel' => null, // "id" of input and "for" of label
     'name' => null, // name of input et name for error validator
+    'iconname' => '', // for icon with input => 'user', 'password'
+    'label' => null, // string text of label
+
+    // custom div global
+    'classdiv' => '', // add your class custom for div around all component
+    
+    // custom error
+    'classdiverror' => '', // add your class custom for message error
+
+    // custom icon
+    'classdivicon' => 'absolute', // add text-color for color icon and top , top equal padding of input
+
+    // custom label
+    'classdivlabel' => '', // add your class custom for div around label
+    'classlabel' => '', // add your class custom for label
+
+    // custom input
+    'classinputforicon' => 'pl-8',
+    'classinput' => 'w-full block outline-none', // add text-size font-weight padding text-color bg-color
+    'classdivinput' => 'relative', // add custom class div of input 
 ])
-// in div or label or input, add your properties of class custom component
 ```
 - form => copy folder ressources/views/components/form
 ```php
@@ -47,6 +61,26 @@ $ php artisan make:component MyComponent --view
 ])
 // slot for text of btn
 // in div or btn, add your properties of class custom component
+```  
+
+- user-svg => copy folder ressources/views/components/icon  
+```php
+// properties :
+@props([
+    'w' => 'w-6', // set width here
+    'h' => 'h-6', // set height here
+    'classdivicon' => 'text-black' // set color here or all class
+])
+```  
+
+- lock-svg => copy folder ressources/views/components/icon  
+```php
+// properties :
+@props([
+    'w' => 'w-6', // set width here
+    'h' => 'h-6', // set height here
+    'classdivicon' => 'text-black' // set color here or all class
+])
 ```  
 
 **Warning custom your design**  

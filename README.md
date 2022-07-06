@@ -14,31 +14,6 @@
 [example upload](#upload)   
 [example migrations](#migration)   
 
----
-
-## <a name="databaselaragon"></a> database and laragon  
-
-- config .env for your database  
-
-```bash
-DB_CONNECTION=mysql # your name of provider
-DB_HOST=127.0.0.1 # host
-DB_PORT=3306 # port
-DB_DATABASE=laravel # name database
-DB_USERNAME=root # name user of database
-DB_PASSWORD= # password of user
-```  
-
-- find url of project in laragon
-
-**before install project in www/  
-folder of laragon restart laragon serve  
-and use url provided of laragon serve**  
-```bash
-# EX : 
-http://folderofproject.test/
-```
-
 ---  
 
 ## <a name="vite"></a> vite

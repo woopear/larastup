@@ -61,8 +61,18 @@ $ php artisan make:component MyComponent --view
 ```  
 - form-reset-password => copy folder ressources/views/components/form
 ```php
+// properties :
 @props([
     'classdiv' => 'w-fit', // classdiv arounded all component' 
+])
+```  
+- form-register-user => copy folder ressources/views/components/form
+```php
+// properties :
+@props([
+    'classdiv' => 'w-fit', // classdiv arounded all component'
+    'textbtn' => 'Créer mon compte', // text of btn
+    'action' => null, // your route for reset password of user --}}
 ])
 ```
 - btn => copy folder ressources/views/components/btn  
@@ -77,6 +87,7 @@ $ php artisan make:component MyComponent --view
 ```  
 - text-link => copy folder ressources/views/components/text-link  
 ```php
+// properties :
 {{ $attributes }} // add other attributes in balise of component
 $textlink // text of link 
 // add href on balide of component

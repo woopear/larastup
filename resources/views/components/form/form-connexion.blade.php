@@ -11,6 +11,7 @@
     {{-- input email or identifiant --}}
     <x-input.input-sample 
         name="email" 
+        type="email"
         placeholder="Identifiant"
         iconname="user"
         requried

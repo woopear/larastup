@@ -59,6 +59,12 @@ $ php artisan make:component MyComponent --view
     'classdiv' => 'w-fit', // classdiv arounded all component' 
 ])
 ```  
+- form-reset-password => copy folder ressources/views/components/form
+```php
+@props([
+    'classdiv' => 'w-fit', // classdiv arounded all component' 
+])
+```
 - btn => copy folder ressources/views/components/btn  
 ```php
 // properties :
@@ -69,14 +75,12 @@ $ php artisan make:component MyComponent --view
 // slot for text of btn
 // in div or btn, add your properties of class custom component
 ```  
-
 - text-link => copy folder ressources/views/components/text-link  
 ```php
 {{ $attributes }} // add other attributes in balise of component
 $textlink // text of link 
 // add href on balide of component
 ```
-
 - user-svg => copy folder ressources/views/components/icon  
 ```php
 // properties :
@@ -86,7 +90,6 @@ $textlink // text of link
     'classdivicon' => 'text-black' // set color here or all class
 ])
 ```  
-
 - lock-svg => copy folder ressources/views/components/icon  
 ```php
 // properties :

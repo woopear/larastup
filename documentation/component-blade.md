@@ -87,7 +87,7 @@ $slot // add icon or text in slot of component
 ])
 {{ $attributes }} // add other attributes in balise of component
 ```
-- btn => copy folder ressources/views/components/btn  
+- btn-sample => copy folder ressources/views/components/btn  
 ```php
 // properties :
 @props([
@@ -97,6 +97,16 @@ $slot // add icon or text in slot of component
 // slot for text of btn
 // in div or btn, add your properties of class custom component
 ```  
+- btn-sample-text => copy folder ressources/views/components/btn  
+```php
+// properties :
+@props([
+    'classdiv' => null, // class div around all component
+    'classbtn' => null, // class of btn
+])
+// slot for text of btn
+// in div or btn, add your properties of class custom component
+``` 
 - text-link-custom => copy folder ressources/views/components/text-link  
 ```php
 // properties :

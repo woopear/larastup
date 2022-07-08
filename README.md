@@ -12,4 +12,4 @@
 [example relations](https://github.com/woopear/larastup/blob/main/documentation/relationship.md)   
 [upload](https://github.com/woopear/larastup/blob/main/documentation/upload-file.md)   
 [migrations](https://github.com/woopear/larastup/blob/main/documentation/migration.md)      
-[validator](https://github.com/woopear/larastup/blob/main/documentation/migration.md)      
+[validator](https://github.com/woopear/larastup/blob/main/documentation/validator.md)      

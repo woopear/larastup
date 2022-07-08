@@ -97,12 +97,15 @@ $slot // add icon or text in slot of component
 // slot for text of btn
 // in div or btn, add your properties of class custom component
 ```  
-- text-link => copy folder ressources/views/components/text-link  
+- text-link-xs => copy folder ressources/views/components/text-link  
 ```php
 // properties :
-{{ $attributes }} // add other attributes in balise of component
-$textlink // text of link 
+
+// add other attributes in balise of component
 // add href on balide of component
+{{ $attributes }} 
+
+$textlink // text of link 
 ```
 - user-svg => copy folder ressources/views/components/icon  
 ```php
@@ -122,5 +125,14 @@ $textlink // text of link
     'classdivicon' => 'text-black' // set color here or all class
 ])
 ```  
+- logout-door-svg => copy folder ressources/views/components/icon
+```php
+// properties :
+@props([
+    'w' => 'w-6', // set width here
+    'h' => 'h-6', // set height here
+    'classdivicon' => 'text-black' // set color here or all class
+])
+```
 
 **Warning custom your design**  

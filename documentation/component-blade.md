@@ -97,6 +97,20 @@ $slot // add icon or text in slot of component
 // slot for text of btn
 // in div or btn, add your properties of class custom component
 ```  
+- text-link-custom => copy folder ressources/views/components/text-link  
+```php
+// properties :
+
+// add other attributes in balise of component
+// add href on balide of component
+{{ $attributes }} 
+
+$textlink // text of link 
+
+@props([
+    'textsize' => 'text-lg', // set size of text
+])
+```  
 - text-link-xs => copy folder ressources/views/components/text-link  
 ```php
 // properties :
@@ -106,7 +120,37 @@ $slot // add icon or text in slot of component
 {{ $attributes }} 
 
 $textlink // text of link 
-```
+```  
+- text-link-sm => copy folder ressources/views/components/text-link  
+```php
+// properties :
+
+// add other attributes in balise of component
+// add href on balide of component
+{{ $attributes }} 
+
+$textlink // text of link 
+```  
+- text-link-lg => copy folder ressources/views/components/text-link  
+```php
+// properties :
+
+// add other attributes in balise of component
+// add href on balide of component
+{{ $attributes }} 
+
+$textlink // text of link 
+```  
+- text-link-xl => copy folder ressources/views/components/text-link  
+```php
+// properties :
+
+// add other attributes in balise of component
+// add href on balide of component
+{{ $attributes }} 
+
+$textlink // text of link 
+```  
 - user-svg => copy folder ressources/views/components/icon  
 ```php
 // properties :

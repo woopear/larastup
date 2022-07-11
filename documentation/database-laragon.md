@@ -1,20 +1,37 @@
-# database and laragon  
+# Laragon Server and config database  
 
-## find url of project in laragon
+## laragon  
 
-before install your project in `c://laragon/www/`  
+1. install laragon [here](https://laragon.org/)  
+download [here](http://laragon.org/download)  
+download laragon for your machine  
+follow the instructions of the installer  
+
+> laragon is an apache server with a layer of mysql,  
+> you will find a www folder, in which you will deposit  
+> your projects, and provide a local address to test  
+> your project, with the format : `myproject.test`
+
+2. before install your project laravel in `c://laragon/www/`  
 - restart laragon server  
 - use url provided of laragon server    
 ```bash
 # EX : 
-http://folderofproject.test/
+http://myproject.test/
 ```  
 
----
+## config .env   
 
-## config .env for your database   
+- laravel is already preconfigured internally  
+you only need to modify the variable  
+`DB_CONNECTION` in the `.env`  
+file with one of the providers  
+implement in `config/database.php` file  
+in the `connections` object  
+here is the list sqlite, mysql, pgsql, sqlsrv  
 
-- copy this code and config with your data
+- copy this code in files `.env`  
+and config with your data
 
 ```bash
 DB_CONNECTION=mysql # your name of provider

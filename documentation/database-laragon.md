@@ -10,7 +10,8 @@ follow the instructions of the installer
 > laragon is an apache server with a layer of mysql,  
 > you will find a www folder, in which you will deposit  
 > your projects, and provide a local address to test  
-> your project, with the format : `myproject.test`
+> your project, with the format : `myproject.test`  
+> you can of course install another server of your choice
 
 2. before install your project laravel in `c://laragon/www/`  
 - restart laragon server  

@@ -1,11 +1,19 @@
-# livewire  
+# Livewire  
 
 1. install in composer  
 ```bash
 $ composer require livewire/livewire
 ```  
 
-2. add livewire in vue  
+2. example create component livewire  
+```bash
+$ php artisan make:livewire counter
+```  
+> this command create two files  
+> 1 in app/Http/livewire  
+> 1 in ressources/views/livewire  
+
+3. add livewire in vue (in layout it's the best)  
 ```html
 <html>
     <head>
@@ -20,14 +28,6 @@ $ composer require livewire/livewire
     </body>
 </html>
 ```  
-
-3. example create component livewire  
-```bash
-$ php artisan make:livewire counter
-```  
-> this command create two files  
-> 1 in app/Http/livewire  
-> 1 in ressources/views/livewire  
 
 4. include component in vue blade  
 ```html

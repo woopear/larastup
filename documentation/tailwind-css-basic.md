@@ -146,7 +146,7 @@ main use more place
         je suis le header
     </header>
     <main>
-        je suis le main
+        @yield('content-app')
     </main>
     <footer>
         je suis le footer
@@ -196,7 +196,7 @@ menu up, menu left, footer in menu left, main center
     <header>
         je suis le header
     </header>
-    <main>
+    <main mainprivate>
         <section sideleftmenu>
             <nav navmenuside>
                 je suis la nav
@@ -237,6 +237,11 @@ header {
 }
 
 main {
+    flex: 1;
+    background: rgb(28, 236, 255);
+}
+
+main[mainprivate] {
     display: flex;
     position: relative;
     flex: 1;

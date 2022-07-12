@@ -1,7 +1,7 @@
 # larastup  
 
 [Laragon Server and config database](https://github.com/woopear/larastup/blob/main/documentation/database-laragon.md)  
-[config vite](https://github.com/woopear/larastup/blob/main/documentation/config-vite.md)  
+[Vite config](https://github.com/woopear/larastup/blob/main/documentation/config-vite.md)  
 [install config tailwind](https://github.com/woopear/larastup/blob/main/documentation/tailwind-css-basic.md)   
 [install livewire](https://github.com/woopear/larastup/blob/main/documentation/livewire.md)   
 [install alpine-unpoly](https://github.com/woopear/larastup/blob/main/documentation/alpine-unpoly.md)   

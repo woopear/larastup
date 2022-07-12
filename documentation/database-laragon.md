@@ -21,6 +21,13 @@ follow the instructions of the installer
 http://myproject.test/
 ```  
 
+3. if you don't use serve laragon or other server  
+use `php serve`, and look website in `localhost:8000`
+```shell
+$ cd myproject
+$ php artisan serve
+```  
+
 ## config .env   
 
 - laravel is already preconfigured internally  

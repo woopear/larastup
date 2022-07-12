@@ -1,4 +1,4 @@
-# config vite
+# Vite config
 
 1. add assets files in head balise for vite serve  
 ```html
@@ -22,7 +22,7 @@ export default defineConfig({
             'resources/css/app.css',
             'resources/js/app.js',
         ]),
-        // add this for hot reaload ...
+        // copy/past this code in your file.
         {
             name: 'blade',
             handleHotUpdate({ file, server }) {
@@ -36,11 +36,4 @@ export default defineConfig({
         }
     ],
 });
-```  
-
-4. if you don't use serve laragon or other server  
-use `php serve`, and look website in `localhost:8000`
-```shell
-$ cd myproject
-$ php artisan serve
 ```  

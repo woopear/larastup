@@ -10,13 +10,13 @@
 [Livewire](https://github.com/woopear/larastup/blob/main/documentation/livewire.md)   
 [Alpine and unpoly](https://github.com/woopear/larastup/blob/main/documentation/alpine-unpoly.md)   
 [Fortify install and config](https://github.com/woopear/larastup/blob/main/documentation/fortify.md)   
-[view blade](https://github.com/woopear/larastup/blob/main/documentation/view-blade.md)   
-[components blade](https://github.com/woopear/larastup/blob/main/documentation/component-blade.md)   
-[middlewares](https://github.com/woopear/larastup/blob/main/documentation/middleware.md)   
-[example relations](https://github.com/woopear/larastup/blob/main/documentation/relationship.md)   
-[upload](https://github.com/woopear/larastup/blob/main/documentation/upload-file.md)   
-[migrations](https://github.com/woopear/larastup/blob/main/documentation/migration.md)      
-[validator](https://github.com/woopear/larastup/blob/main/documentation/validator.md)   
+[View blade](https://github.com/woopear/larastup/blob/main/documentation/view-blade.md)   
+[Components blade](https://github.com/woopear/larastup/blob/main/documentation/component-blade.md)   
+[Middlewares](https://github.com/woopear/larastup/blob/main/documentation/middleware.md)   
+[Example relations](https://github.com/woopear/larastup/blob/main/documentation/relationship.md)   
+[Upload](https://github.com/woopear/larastup/blob/main/documentation/upload-file.md)   
+[Validator](https://github.com/woopear/larastup/blob/main/documentation/validator.md)   
+[Migrations](https://github.com/woopear/larastup/blob/main/documentation/migration.md)      
 
 ## link for install other project  
 

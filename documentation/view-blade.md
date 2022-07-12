@@ -1,4 +1,7 @@
-# views blade  
+# Views blade  
+
+> change the html structure as you want  
+> all these are only examples for layouts and sections
 
 - layouts and partials  
 1. create folder layouts in views folder  
@@ -41,7 +44,7 @@
 </html>
 ```  
 3. use layout in files blade  
-```php
+```js
 // call layout app and call content main app
 @extends('layouts.app')
 
@@ -53,7 +56,7 @@
 @extends('layouts.private')
 
 @section('content-private')
-    <p class="text-red-500">accueil</p>
+    <p class="text-red-500">accueil privé</p>
 @endsection
 ```  
 4. for create a section (header, nav, footer, etc...)  

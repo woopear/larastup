@@ -1,11 +1,11 @@
-# upload files  
+# Upload files  
 
 - create a link of app/public -> storage/app/public  
 ```bash
 $ php artisan storage:link
 ```
 
-## facade Storage
+## Facade Storage
 
 - upload file in local  
 (this example play for upload public  
@@ -32,9 +32,9 @@ $url = Storage::url($file)
 // down file for users
 return Storage::download($file)
 ```  
-## less facade Storage
+## Without facade Storage
 
-- upload file less facade Storage
+- upload file without facade Storage
 ```php
 // upload file
 $file = $request->file('myinputname')->store('myfolder')

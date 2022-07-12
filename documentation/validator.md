@@ -1,6 +1,6 @@
-# validator  
+# Validator  
 
-## fast use validator in controller of model
+## Fast use validator in controller of model
 
 - call function validate on object `$request` of namespace  
 Illuminate\Http\Request
@@ -19,7 +19,7 @@ $validatedData = $request->validateWithBag('namebagerror', [rules, ...params])
 $validated = $request->safe()->merge(['name' => 'Taylor Otwell']);
 ```  
 
-## create request class validator  
+## Create request class validator  
 
 - create request with `php artisan`  
 ```bash
@@ -91,7 +91,7 @@ protected $redirectRoute = 'my-route-for-redirect';
 
 > look documentation for more examples of properties
 
-## Code for copy examlple  
+## Code for copy example  
 
 - password rules `laravel` provided   
 if do you use more example here, implement this rule for password  
@@ -145,7 +145,7 @@ public function messages()
 }
 ```
 
-- user connexion validator  
+- create file `UserConnexionValidator` user connexion validator  
 ```php
 use Illuminate\Validation\Rules\Password;
 
@@ -164,7 +164,7 @@ return [
 ]
 ```  
 
-- user created validator  
+- create file `UserCreatedValidator` user created validator  
 ```php
 use Illuminate\Validation\Rules\Password;
 
@@ -193,7 +193,7 @@ return [
 ]
 ```  
 
-- forgot password  
+- create file `ForgotPassword` forgot password  
 ```php
 // rules
 return [

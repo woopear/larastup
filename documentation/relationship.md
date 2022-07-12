@@ -99,6 +99,8 @@ public function user()
 
 ## - many to many  
 
+> (to build)
+
 - create one table intermediaire  
 and named in alphabetical order and in the singular  
 ```php

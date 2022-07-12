@@ -1,14 +1,16 @@
-# components blade  
+# Components blade  
 
 - create component with class  
 ```bash
 $ php artisan make:component MyComponent
 ```  
 
-- create component less class  
+- create component without class  
 ```bash
 $ php artisan make:component MyComponent --view
-```
+```  
+
+# Example components
 
 - input => copy folder ressources/views/components/input  
 ```php

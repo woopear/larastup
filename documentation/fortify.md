@@ -1,4 +1,4 @@
-# fortify install and config
+# Fortify install and config
 
 1. install composer  
 ```bash	
@@ -17,16 +17,22 @@ $ php artisan vendor:publish --provider="Laravel\Fortify\FortifyServiceProvider"
     use Illuminate\Contracts\Auth\MustVerifyEmail;
     class User extends Authenticatable implements MustVerifyEmail {}
     ``` 
-    and equally update files =>  
-    `app/Actions/Fortify/CreateNewUser.php`  
+    - update file => `app/Actions/Fortify/CreateNewUser.php`  
     change rules validated and properties for create user. 
     with your properties in model user.  
-    `app/Actions/Fortify/UpdateUserProfileInformations.php`  
-    same as above  
-    `database/factories/UserFactory.php`
-    same as above  
-    `database/migrations/create_users_table.php`  
-    same as above  
+
+    - update file =>`app/Actions/Fortify/UpdateUserProfileInformations.php`  
+    change rules validated and properties for create user. 
+    with your properties in model user.  
+
+    - update file => `database/factories/UserFactory.php`
+    change rules validated and properties for create user. 
+    with your properties in model user.  
+
+    - update file => `database/migrations/create_users_table.php`  
+    change rules validated and properties for create user. 
+    with your properties in model user.  
+
 
 4. add provider fortify in `config/app.php`  
 ```php
@@ -53,7 +59,7 @@ App\Providers\FortifyServiceProvider::class,
 ],
 
 // change redirect path before connected
-'home' => RouteServiceProvider::HOME, // go to class and change HOME  
+'home' => RouteServiceProvider::HOME, // go to class and change value of HOME  
 
 // created SPA change this with false
 'views' => true,
@@ -114,10 +120,12 @@ public function boot()
 ```php
 // on group route or route add middelware ` 'auth' `
 // warning look view for redirect is set in files `config/fortify`  
+
 // EX : add middelware in route 
 Route::get('dashboard', function () {
     return view('dashboard');
 })->middleware('auth');
+
 // EX : add middelware in group route  
 Route::middleware(['auth'])->name('private.')->group(function () {
     // private.dashboard
@@ -127,4 +135,6 @@ Route::middleware(['auth'])->name('private.')->group(function () {
 ```  
 
 > now create views and feature custom  
-> for different request
+> for different request, do you use a files  
+> in `ressources/views/components` for create  
+> your components and your views for auth

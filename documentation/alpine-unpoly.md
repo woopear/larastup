@@ -1,4 +1,4 @@
-# alpine js  
+# Alpine js  
 
 1. install  
 ```bash
@@ -14,7 +14,7 @@ Alpine.start()
 
 ---
 
-# unpoly js  
+# Unpoly js  
 
 1. install  
 ```bash

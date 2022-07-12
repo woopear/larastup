@@ -8,8 +8,8 @@
 [Vite config](https://github.com/woopear/larastup/blob/main/documentation/config-vite.md)  
 [Tailwind config](https://github.com/woopear/larastup/blob/main/documentation/tailwind-css-basic.md)   
 [Livewire](https://github.com/woopear/larastup/blob/main/documentation/livewire.md)   
-[install alpine-unpoly](https://github.com/woopear/larastup/blob/main/documentation/alpine-unpoly.md)   
-[install config fortify](https://github.com/woopear/larastup/blob/main/documentation/fortify.md)   
+[Alpine and unpoly](https://github.com/woopear/larastup/blob/main/documentation/alpine-unpoly.md)   
+[Fortify install and config](https://github.com/woopear/larastup/blob/main/documentation/fortify.md)   
 [view blade](https://github.com/woopear/larastup/blob/main/documentation/view-blade.md)   
 [components blade](https://github.com/woopear/larastup/blob/main/documentation/component-blade.md)   
 [middlewares](https://github.com/woopear/larastup/blob/main/documentation/middleware.md)   
@@ -31,5 +31,8 @@
 [Vite config](https://github.com/woopear/larastup/blob/main/documentation/config-vite.md)  
 [Tailwind config](https://github.com/woopear/larastup/blob/main/documentation/tailwind-css-basic.md)  
 [Livewire](https://github.com/woopear/larastup/blob/main/documentation/livewire.md)   
+[Alpine and unpoly](https://github.com/woopear/larastup/blob/main/documentation/alpine-unpoly.md)   
+[Fortify install and config](https://github.com/woopear/larastup/blob/main/documentation/fortify.md)   
+
 
 

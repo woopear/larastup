@@ -35,38 +35,103 @@ module.exports = {
 }
 ```  
 
-4. create file `darkmode.js` in `ressouces/js`  
-and copy/past this code in `darkmode.js` file.  
-```js 
-// On page load or when changing themes, best to add inline in `head` to avoid FOUC
-if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-  document.documentElement.classList.add('dark')
-} else {
-  document.documentElement.classList.remove('dark')
-}
-
-// Whenever the user explicitly chooses light mode
-localStorage.theme = 'light'
-
-// Whenever the user explicitly chooses dark mode
-localStorage.theme = 'dark'
-
-// Whenever the user explicitly chooses to respect the OS preference
-localStorage.removeItem('theme')
-```  
-
-5. copy/past this code in `app.js`  
-```js
-//... other import
-import './darkmode';
-```
-
-6. config app.css `(ressources/css/app.css)`  
+4. config app.css `(ressources/css/app.css)`  
 ```css
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 ```  
+
+5. create file `darkmode.js` in `ressouces/js`  
+and copy/past this code in `darkmode.js` file.  
+```js 
+// check if theme dark exists in localstorage  
+// or if the device has a dark mode
+const checkDeviceMode = (localStorage.theme === 'dark' || 
+                        (!('theme' in localStorage) && 
+                        window.matchMedia('(prefers-color-scheme: dark)').matches))
+
+const checkModeDarkWhenLoading = localStorage.theme === 'dark'
+
+// add mode dark
+function addDarkMode() {
+    document.documentElement.classList.add('dark')
+    localStorage.setItem('theme', 'dark')
+}
+
+// remove mode dark
+function removeDarkMode() {
+    document.documentElement.classList.remove('dark')
+    localStorage.removeItem('theme')
+}
+
+// switch mode dark if 'theme' not exist in local storage
+function changeModeDark() {
+    if('theme' in localStorage){
+        removeDarkMode()
+    }else{
+        addDarkMode()
+    }
+}
+
+// if mode dark exist in local storage
+// or if the device has a dark mode
+// active mode dark else remove mode dark
+function whenLoadingAddModeDarkIfExist(device = true) {
+    if(device) {
+        if (checkDeviceMode) {
+            addDarkMode()
+        } else {
+            removeDarkMode()
+        }
+    }else {
+        if(checkModeDarkWhenLoading){
+            addDarkMode()
+        }else{
+            removeDarkMode()
+        }
+    }
+}
+
+// switch mode dark
+function switchModeDark() {
+    document.querySelector('[darkmodebtn]').addEventListener('click', () => {
+        changeModeDark()
+    });
+}
+
+export default {
+    whenLoadingAddModeDarkIfExist,
+    switchModeDark,
+}
+```  
+
+6. copy/past this code in `app.js`  
+and use function that you need 
+```js
+//... other import
+import DarkMode from'./darkmode';
+
+// when loading check mode dark with device
+//DarkMode.whenLoadingAddModeDarkIfExist()
+
+// when loading check mode dark without device
+DarkMode.whenLoadingAddModeDarkIfExist(false)
+
+// switch mode dark  
+DarkMode.switchModeDark()
+```  
+
+7. add the attribute `darkmodebtn` on the tag of  
+your btn as in the example below  
+```html
+<button class="cursor-pointer" darkmodebtn>
+    Switch dark mode
+</button>
+```  
+
+> you must have chosen tailwind's  
+> manual dark mode for all of this to work
 
 ## css layout  
 

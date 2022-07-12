@@ -1,5 +1,7 @@
 # larastup  
 
+**this repo does not deal with installing laravel refer to the documentation.**
+
 ## all links
 
 [Laragon Server and config database](https://github.com/woopear/larastup/blob/main/documentation/database-laragon.md)  

@@ -1,4 +1,4 @@
-# tailwind and css basic  
+# Tailwind config and examples layouts css  
 
 1. before install project laravel, install tailwind  
 ```bash
@@ -28,15 +28,15 @@ module.exports = {
   // ...
 }
 
-// for auto mode
+// for auto mode relationship your device mode
 module.exports = {
   darkMode: 'media',
   // ...
 }
-```
+```  
 
-4. example file js for mode dark manually  
-customize this code 
+4. create file `darkmode.js` in `ressouces/js`  
+and copy/past this code in `darkmode.js` file.  
 ```js 
 // On page load or when changing themes, best to add inline in `head` to avoid FOUC
 if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
@@ -53,9 +53,15 @@ localStorage.theme = 'dark'
 
 // Whenever the user explicitly chooses to respect the OS preference
 localStorage.removeItem('theme')
+```  
+
+5. copy/past this code in `app.js`  
+```js
+//... other import
+import './darkmode';
 ```
 
-5. config app.css `(ressources/css/app.css)`  
+6. config app.css `(ressources/css/app.css)`  
 ```css
 @tailwind base;
 @tailwind components;

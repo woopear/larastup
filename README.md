@@ -34,7 +34,7 @@ follow the instructions of the installer
 - use url provided of laragon server    
 ```bash
 # EX : 
-http://myproject.test/
+http://myproject.test
 ```  
 
 3. if you don't use serve laragon or other server  
@@ -56,9 +56,47 @@ DB_USERNAME=root # name user of database
 DB_PASSWORD= # password of user
 ```  
 
-## Config user  
+## Start your project    
 
+1. install dependencies  
+```bash
+$ npm i
+```  
+
+- install tailwind   
+    ```bash
+    $ npm install -D tailwindcss postcss autoprefixer  
+    $ npx tailwindcss init -p  
+
+    # copy/paste file `tailwind.config.js`
+    ```  
 - 
+
+2. config `vite.config.js`  
+```bash
+# copy/paste file `vite.config.js`
+```  
+
+3. add files basic for project  
+```bash
+# copy/paste folder `ressources/views`
+```  
+
+4. add files of route for project  
+```bash
+# copy/paste file `routes/web.php`
+```  
+
+5. start server vite 
+```bash
+$ npm run dev
+```  
+
+6. go to browser  
+```bash  
+http://myproject.test
+```  
+
 
 
 

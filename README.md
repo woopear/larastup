@@ -63,6 +63,10 @@ DB_PASSWORD= # password of user
 $ npm i
 ```  
 
+- install Alpinejs  
+    ```bash
+    $ npm install alpinejs
+    ```  
 - install tailwind   
     ```bash
     $ npm install -D tailwindcss postcss autoprefixer  
@@ -71,11 +75,64 @@ $ npm i
     # copy/paste file `tailwind.config.js`
     # copy/paste folder `ressources/css`
     # copy/paste folder `ressources/js`
+
+    # in `ressources/css/app.css` add your uri of font 
+    # in url('your-uri')
     ```  
+- install livewire  
+    ```bash
+    # install
+    $ composer require livewire/livewire  
+
+    # ex : create component livewire 'counter'
+    # not use for install
+    $ php artisan make:livewire counter
+    ```
 - install fortify  
     ```bash
-    
-    ```
+    # install fortify
+    $ composer require laravel/fortify
+    $ php artisan vendor:publish --provider="Laravel\Fortify\FortifyServiceProvider"
+    # copy code in `app/Models/User.php` and paste in your file
+    # copy code in `database/migrations/create_users_table.php` and paste in your file
+    # copy code in `app/Actions/Fortify/CreateNewUser.php` and paste in your file
+
+    # create model and migration and factory of Role
+    $ php artisan make:model Role -mf
+    # copy code in `database/migrations/create_role_table.php` and paste in your
+    # copy code in `database/factories/RoleFactory.php` and paste in your file
+    # copy code in `app/Models/Role.php` and paste in your file
+
+    # copy code in `app/Providers/FortifyServiceProvider.php` and paste in your file
+
+    # in `app/Providers/RouteServiceProvider.php` change this :
+    public const HOME = '/login';
+    # with this
+    public const HOME = '/private/dashboard';
+
+    # in `config/app.php` add this : 
+    /*
+    * Package Service Providers...
+    */
+    App\Providers\FortifyServiceProvider::class,
+
+    # in `config/fortify.php` update this : 
+    'features' => [
+        Features::registration(),
+        Features::resetPasswords(),
+        Features::emailVerification(),
+        Features::updateProfileInformation(),
+        Features::updatePasswords(),
+        /*Features::twoFactorAuthentication([
+            'confirm' => true,
+            'confirmPassword' => true,
+            // 'window' => 0,
+        ]),*/
+    ],
+    ```  
+    > look at files related to user,  
+    > role and uncomment what you need  
+    > and customize as you want
 
 2. config `vite.config.js`  
 ```bash

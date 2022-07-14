@@ -8,14 +8,13 @@
         @livewireStyles
         <title>{{ $titlePage ?? '' }}</title>
     </head>
-    <body class="">
+    <body>
         @include('partials.header-app')
+
         <main>
-            <button class="cursor-pointer" darkmodebtn>
-                Switch dark mode
-            </button>
             @yield('content-app')
         </main>
+
         @include('partials.footer-app')
         <!-- livewire -->
         @livewireScripts

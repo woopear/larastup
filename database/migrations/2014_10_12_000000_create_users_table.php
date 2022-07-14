@@ -17,12 +17,12 @@ return new class extends Migration
             $table->id();
             // $table->string('first_name');
             // $table->string('last_name');
-            // $table->string('pseudo');
+            // $table->string('pseudo')->nullable();
             $table->string('name');
-            // $table->string('address');
-            // $table->string('code_post');
-            // $table->string('city');
-            // $table->string('phone');
+            // $table->string('address')->nullable();
+            // $table->string('code_post')->nullable();
+            // $table->string('city')->nullable();
+            // $table->string('phone')->nullable();
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
@@ -30,7 +30,7 @@ return new class extends Migration
             $table->timestamps();
 
             // relation with role table  
-            // $table->foreignId('role_id')->nullable()->constrained();
+            $table->foreignId('role_id')->nullable()->constrained();
         });
     }
 

@@ -9,6 +9,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        body: ["Roboto", "sans-serif"], // add name of your font family import
+      },
       /*colors: {
         fc: "#E7F2FF", // font light
         fc2: "#B8D8FF", // font light 2
@@ -21,9 +24,6 @@ module.exports = {
         ac: "#0094FF", // action 
         ach: "#004B82", // action hover
         hc: "#006FFF", // important 
-      },
-      fontFamily: {
-        // body: ["", "sans-serif"], // add name of your font family import
       },
       fontSize: {
         // title

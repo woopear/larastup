@@ -58,65 +58,64 @@ DB_PASSWORD= # password of user
 
 ## Start your project    
 
-1. install dependencies  
+- install dependencies  
 ```bash
 $ npm i
 ```  
 
 - install Alpinejs  
-    ```bash
-    $ npm install alpinejs
-    ```  
+```bash
+$ npm install alpinejs
+```  
 - install tailwind   
-    ```bash
-    $ npm install -D tailwindcss postcss autoprefixer  
-    $ npx tailwindcss init -p  
+```bash
+$ npm install -D tailwindcss postcss autoprefixer  
+$ npx tailwindcss init -p  
 
-    # copy/paste file `tailwind.config.js`
-    # copy/paste folder `ressources/css`
-    # copy/paste folder `ressources/js`
+# copy/paste file `tailwind.config.js`
+# copy/paste folder `ressources/css`
+# copy/paste folder `ressources/js`
 
-    # in `ressources/css/app.css` add your uri of font 
-    # in url('your-uri')
-    ```  
+# in `ressources/css/app.css` add your uri of font 
+# in url('your-uri')
+```  
 - install livewire  
-    ```bash
-    # install
-    $ composer require livewire/livewire  
+```bash
+# install
+$ composer require livewire/livewire  
 
-    # ex : create component livewire 'counter'
-    # not use for install
-    $ php artisan make:livewire counter
-    ```
-- install fortify  
+# ex : create component livewire 'counter'
+# not use for install
+$ php artisan make:livewire counter
+```
+- fortify
+
+    1. install fortify after install : 
+    - copy code in `app/Models/User.php` and paste in your file  
+    - copy code in `database/migrations/create_users_table.php` and paste in your file  
+    - copy code in `app/Actions/Fortify/CreateNewUser.php` and paste in your file  
+    - copy code in `app/Providers/FortifyServiceProvider.php` and paste in your file  
     ```bash
     # install fortify
     $ composer require laravel/fortify
-    $ php artisan vendor:publish --provider="Laravel\Fortify\FortifyServiceProvider"
-    # copy code in `app/Models/User.php` and paste in your file
-    # copy code in `database/migrations/create_users_table.php` and paste in your file
-    # copy code in `app/Actions/Fortify/CreateNewUser.php` and paste in your file
-
-    # create model and migration and factory of Role
-    $ php artisan make:model Role -mf
-    # copy code in `database/migrations/create_role_table.php` and paste in your
-    # copy code in `database/factories/RoleFactory.php` and paste in your file
-    # copy code in `app/Models/Role.php` and paste in your file
-
-    # copy code in `app/Providers/FortifyServiceProvider.php` and paste in your file
-
-    # in `app/Providers/RouteServiceProvider.php` change this :
+    $ php artisan vendor:publish --provider="Laravel\Fortify\FortifyServiceProvider" 
+    ```  
+    2. in `app/Providers/RouteServiceProvider.php` change this :  
+    ```php
+    # old
     public const HOME = '/login';
-    # with this
+    # new
     public const HOME = '/private/dashboard';
-
-    # in `config/app.php` add this : 
+    ```  
+    3. in `config/app.php` add this :  
+    ```php
     /*
     * Package Service Providers...
     */
     App\Providers\FortifyServiceProvider::class,
-
-    # in `config/fortify.php` update this : 
+    ```  
+    4. in `config/fortify.php` update this :
+    ```php
     'features' => [
         Features::registration(),
         Features::resetPasswords(),
@@ -130,31 +129,67 @@ $ npm i
         ]),*/
     ],
     ```  
+    5. create model and migration and factory of Role  
+    after install : 
+    - copy code in `database/migrations/create_role_table.php` and paste in your  
+    - copy code in `database/factories/RoleFactory.php` and paste in your file  
+    - copy code in `app/Models/Role.php` and paste in your file  
+    ```bash
+    $ php artisan make:model Role -mf
+    ```  
+    6. copy other folder  
+    - copy folder `app/View/Components/`  
+    - copy folder `ressources/views`  
+    
+    7. params your provider of mail in file `.env`  
+    ```bash	 
+    MAIL_MAILER=smtp
+    MAIL_HOST=mailhog
+    MAIL_PORT=1025
+    MAIL_USERNAME=null
+    MAIL_PASSWORD=null
+    MAIL_ENCRYPTION=null
+    MAIL_FROM_ADDRESS="hello@example.com"
+    MAIL_FROM_NAME="${APP_NAME}"
+    ```  
+    8. execute this for create migration for data in database  
+    ```bash
+    $ php artisan migrate
+    # or
+    $ php artisan migrate:refresh
+    ```  
+    9. execute this for create role of 'root' for your first user  
+    ```bash
+    $ php artisan tinker
+    >>> Role::factory()->count(1)->create();
+    >>> exit
+    # check your database for see is good
+    ```
     > look at files related to user,  
     > role and uncomment what you need  
     > and customize as you want
 
-2. config `vite.config.js`  
+- config `vite.config.js`  
 ```bash
 # copy/paste file `vite.config.js`
 ```  
 
-3. add files basic for project  
+- add files basic for project  
 ```bash
 # copy/paste folder `ressources/views`
 ```  
 
-4. add files of route for project  
+- add files of route for project  
 ```bash
 # copy/paste file `routes/web.php`
 ```  
 
-5. start server vite 
+- start server vite 
 ```bash
 $ npm run dev
 ```  
 
-6. go to browser  
+- go to browser  
 ```bash  
 http://myproject.test
 ```  

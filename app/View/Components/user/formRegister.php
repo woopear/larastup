@@ -8,20 +8,13 @@ use Illuminate\View\Component;
 class formRegister extends Component
 {
     /**
-     * text of btn of formulaire
-     *
-     * @var [string]
-     */
-    public $textBtn;
-
-    /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($textBtn = 'Créer')
+    public function __construct()
     {
-        $this->textBtn = $textBtn;
+        //
     }
 
     /**

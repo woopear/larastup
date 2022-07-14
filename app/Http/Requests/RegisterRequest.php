@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use App\Models\User;
 use Illuminate\Validation\Rule;
 use Illuminate\Foundation\Http\FormRequest;
 use App\Actions\Fortify\PasswordValidationRules;
@@ -31,12 +32,12 @@ class RegisterRequest extends FormRequest
             // rules
             // 'firstName' => ['required', 'string'],
             // 'lastName' => ['required', 'string'],
-            // 'pseudo' => ['required', 'string'],
+            // 'pseudo' => ['string'],
             'name' => ['required', 'string', 'max:255'], // delete this if use first_name
-            // 'address' => ['required', 'string'],
-            // 'codePost' => ['required', 'string'],
-            // 'city' => ['required', 'string'],
-            // 'phone' => ['required', 'string'],
+            // 'address' => ['string'],
+            // 'codePost' => ['string'],
+            // 'city' => ['string'],
+            // 'phone' => ['string'],
             'email' => [
                 'required',
                 'string',
@@ -59,12 +60,7 @@ class RegisterRequest extends FormRequest
             // message of rule
             // 'firstName.required' => 'Champ obligatoire',
             // 'lastName.required' => 'Champ obligatoire',
-            // 'pseudo.required' => 'Champ obligatoire',
             'name.required' => 'Champ obligatoire',
-            // 'address.required' => 'Champ obligatoire',
-            // 'codePost.required' => 'Champ obligatoire',
-            // 'city.required' => 'Champ obligatoire',
-            // 'phone.required' => 'Champ obligatoire',
             'email.required' => 'Champ obligatoire',
             'email.email' => 'Entrer un email valide',
             'email.max' => 'Email trop long',

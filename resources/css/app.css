@@ -8,6 +8,7 @@
 html,
 body {
     font-size: 1.125rem;
+    line-height: 1.125;
     min-height: 100vh;
 }
 

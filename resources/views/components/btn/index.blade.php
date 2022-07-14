@@ -9,7 +9,7 @@
     {{-- btn --}}
     <button 
         {{ $attributes }}
-        class="px-4 py-2 text-lg text-white bg-blue-500 hover:bg-blue-700 rounded-lg {{ $classbtn }}"
+        class="px-4 py-2 text-white bg-blue-500 hover:bg-blue-700 rounded-lg {{ $classbtn }}"
     >
         {{ $slot }}
     </button>

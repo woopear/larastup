@@ -69,8 +69,13 @@ $ npm i
     $ npx tailwindcss init -p  
 
     # copy/paste file `tailwind.config.js`
+    # copy/paste folder `ressources/css`
+    # copy/paste folder `ressources/js`
     ```  
-- 
+- install fortify  
+    ```bash
+    
+    ```
 
 2. config `vite.config.js`  
 ```bash

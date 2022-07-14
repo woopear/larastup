@@ -2,6 +2,9 @@
     // global
     'type' => 'icon', // change with icon , switch , text, according to your choice
     'justify' => '', // place right, center, left, with justify from tailwind
+    // icon
+    'classdivicondark' => 'text-black', // class for icon dark
+    'classdiviconlight' => 'text-black', // class for icon light
     // switch
     'textswitchdark' => 'Mode dark activé', // the text of the button in switch in dark mode
     'textswitchlight' => 'Mode dark désactivé', // the text of the button in switch in light mode
@@ -22,10 +25,10 @@
     @if ($type == 'icon')    
         <button x-data="{dark: localStorage.getItem('theme')}" @click="dark = !dark" class="cursor-pointer" darkmodebtn>
             <template x-if="dark">
-                <x-icon.dark-svg />
+                <x-icon.dark-svg classdiv="{{ $classdivicondark }}" />
             </template>
             <template x-if="!dark">
-                <x-icon.light-svg />
+                <x-icon.light-svg classdiv="{{ $classdiviconlight }}" />
             </template>
         </button>
     @elseif ($type == 'switch')

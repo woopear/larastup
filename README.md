@@ -67,18 +67,24 @@ $ npm i
 ```bash
 $ npm install alpinejs
 ```  
-- install tailwind   
+
+- install Unpoly  
+```bash
+$ npm install unpoly --save
+```  
+
+- tailwind  
+
+    1. install tailwind, after install :  
+    - copy/paste file `tailwind.config.js`  
+    - copy/paste folder `ressources/css`  
+    - copy/paste folder `ressources/js`  
+    - in `ressources/css/app.css` add your uri of front
 ```bash
 $ npm install -D tailwindcss postcss autoprefixer  
 $ npx tailwindcss init -p  
-
-# copy/paste file `tailwind.config.js`
-# copy/paste folder `ressources/css`
-# copy/paste folder `ressources/js`
-
-# in `ressources/css/app.css` add your uri of font 
-# in url('your-uri')
 ```  
+
 - install livewire  
 ```bash
 # install
@@ -88,9 +94,10 @@ $ composer require livewire/livewire
 # not use for install
 $ php artisan make:livewire counter
 ```
+
 - fortify
 
-    1. install fortify after install : 
+    1. install fortify, after install : 
     - copy code in `app/Models/User.php` and paste in your file  
     - copy code in `database/migrations/create_users_table.php` and paste in your file  
     - copy code in `app/Actions/Fortify/CreateNewUser.php` and paste in your file  
@@ -129,7 +136,12 @@ $ php artisan make:livewire counter
         ]),*/
     ],
     ```  
-    5. create model and migration and factory of Role  
+    5. change message of validator of password  
+    - in `vendor/laravel/fortify/src/Rules/Password.php`  
+    > check this file and change the password's message  
+    > you can also change the password verification rules here
+
+    6. create model and migration and factory of Role  
     after install : 
     - copy code in `database/migrations/create_role_table.php` and paste in your  
     - copy code in `database/factories/RoleFactory.php` and paste in your file  
@@ -137,11 +149,18 @@ $ php artisan make:livewire counter
     ```bash
     $ php artisan make:model Role -mf
     ```  
-    6. copy other folder  
-    - copy folder `app/View/Components/`  
+    7. copy other folder  
+    - copy folder `app/View/`  
     - copy folder `ressources/views`  
+    - copy folder `app/Http/Requests`  
+    - copy file in `app/Http/Middleware/RoleMiddleware.php`  
+    - copy file in `routes/web.php`  
+
+    > look at files related to user,  
+    > role and uncomment what you need  
+    > and customize as you want  
     
-    7. params your provider of mail in file `.env`  
+    8. params your provider of mail in file `.env`  
     ```bash	 
     MAIL_MAILER=smtp
     MAIL_HOST=mailhog
@@ -152,22 +171,22 @@ $ php artisan make:livewire counter
     MAIL_FROM_ADDRESS="hello@example.com"
     MAIL_FROM_NAME="${APP_NAME}"
     ```  
-    8. execute this for create migration for data in database  
+    9. execute this for create migration for data in database  
     ```bash
     $ php artisan migrate
     # or
     $ php artisan migrate:refresh
     ```  
-    9. execute this for create role of 'root' for your first user  
+    10. execute this for create role of 'root' for your first user  
     ```bash
     $ php artisan tinker
     >>> Role::factory()->count(1)->create();
+    >>> Role::factory()->create(['libelle' => 'auth']);
     >>> exit
     # check your database for see is good
-    ```
-    > look at files related to user,  
-    > role and uncomment what you need  
-    > and customize as you want
+    ```  
+    > visit http://foldermyproject.test/register  
+    > and test register user
 
 - config `vite.config.js`  
 ```bash

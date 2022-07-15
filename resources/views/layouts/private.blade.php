@@ -19,7 +19,7 @@
             </section>
 
             <section contentmain>
-                @yield('content-app')
+                @yield('content-private')
             </section>
         </main>
 

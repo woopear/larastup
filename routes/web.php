@@ -21,6 +21,6 @@ Route::get('/', function () {
 Route::middleware(['auth'])->name('private.')->group(function () {
     // route name => private.dashboard
     Route::get('/private/dashboard', function () {
-        // ... add you controller
+        return view('private/dashboard');
     })->name('dashboard');
 });

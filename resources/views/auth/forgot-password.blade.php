@@ -1,6 +1,5 @@
 @extends('layouts.app')
 
 @section('content-app')
-    <p>Connexion user</p>
-    <x-user.form-login/>
+    <p>Mot de passe oublié</p>
 @endsection

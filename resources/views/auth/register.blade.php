@@ -1,5 +1,6 @@
 @extends('layouts.app')
 
 @section('content-app')
-    <p>Register</p>
+    {{-- register form --}}
+    <x-user.form-register/>
 @endsection

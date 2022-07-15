@@ -10,7 +10,7 @@
     action="{{ route('register') }}"
     textbtn="Créer"
 >
-    {{-- select role --}}
+    {{-- select role, delete this, if you not selected the role --}}
     <x-input.select-role/>
 
     {{-- firstName 
@@ -75,6 +75,14 @@
     <x-input.input-sample 
         name="password" 
         placeholder="Mot de passe" 
+        type="password" 
+        required
+    />
+
+    {{-- password_confirmation --}}
+    <x-input.input-sample 
+        name="password_confirmation" 
+        placeholder="Confirmer le mot de passe" 
         type="password" 
         required
     />

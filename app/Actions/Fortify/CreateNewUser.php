@@ -22,6 +22,8 @@ class CreateNewUser implements CreatesNewUsers
      */
     public function create(array $input)
     {
+        $role = null;
+
         // validate create user form
         $registerValidator = new RegisterRequest();
         Validator::make(
@@ -31,7 +33,11 @@ class CreateNewUser implements CreatesNewUsers
         )->validate();
 
         // get role 
-        $role = Role::find($input['role']);
+        if ($input['role']) {
+            $role = Role::find($input['role']);
+        } else {
+            $role = Role::where('libelle', 'auth');
+        }
 
         // create user in bdd
         $user = User::create([
